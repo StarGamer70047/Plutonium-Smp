@@ -2,56 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Plutonium SMP</title>
+<title>Lunar Rewadz</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="glow-bg"></div>
+<canvas id="bg"></canvas>
 
-<!-- Sidebar -->
 <div class="sidebar">
-  <div class="server">PS</div>
+  <div class="server active">LR</div>
 </div>
 
-<!-- Channels -->
 <div class="channels">
-  <h3>PLUTONIUM SMP</h3>
+  <h3>SERVER</h3>
   <p onclick="showSection('home')"># home</p>
-  <p onclick="showSection('about')"># about</p>
-  <p onclick="showSection('server')"># server-info</p>
+  <p onclick="showSection('chat')"># live-chat</p>
+  <p onclick="showSection('voice')"># voice</p>
   <p onclick="showSection('join')"># join</p>
 </div>
 
-<!-- Chat -->
 <div class="chat">
 
   <!-- HOME -->
   <div id="home" class="section">
-    <div class="message">
-      <h2>⚡ Plutonium SMP</h2>
-      <p>Welcome to the best Minecraft server 🚀</p>
+    <div class="message fade">
+      <h2>👑 Lunar Rewadz</h2>
+      <p>Best Gaming Community 🚀</p>
+      <span class="status online"></span> Online
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <div id="about" class="section" style="display:none;">
-    <div class="message">
-      <h2>About 💬</h2>
-      <p>🔥 Survival SMP</p>
-      <p>🎮 Active Community</p>
-      <p>⚔️ Events & Rewards</p>
-    </div>
+  <!-- LIVE CHAT -->
+  <div id="chat" class="section" style="display:none;">
+    <div id="chatBox"></div>
+    <p id="typing">User is typing...</p>
   </div>
 
-  <!-- SERVER INFO -->
-  <div id="server" class="section" style="display:none;">
+  <!-- VOICE -->
+  <div id="voice" class="section" style="display:none;">
     <div class="message">
-      <h2>Server Info 📊</h2>
-      <p>👑 Owner: YOUR_OWNER_NAME</p>
-      <p>🛠️ Staff: You (Staff Member)</p>
-      <p>👥 Total Members: 500+ (update manually)</p>
+      🎧 Voice Channel  
+      <p>Users connected: 5</p>
     </div>
   </div>
 
@@ -59,7 +51,7 @@
   <div id="join" class="section" style="display:none;">
     <div class="message">
       <h2>Join Now 🚀</h2>
-      <a href="https://discord.gg/XmHPy5NA9U" target="_blank">
+      <a href="https://discord.gg/YOUR_LINK" target="_blank">
         <button class="join-btn">Join Discord</button>
       </a>
     </div>
