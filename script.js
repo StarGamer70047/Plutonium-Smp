@@ -1,69 +1,59 @@
-body {
-  margin: 0;
-  display: flex;
-  background: #0f172a;
-  color: white;
-  font-family: Arial;
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(sec => {
+    sec.style.display = "none";
+  });
+  document.getElementById(id).style.display = "block";
 }
 
-/* Background canvas */
-#bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+/* Fake chat messages */
+const chatBox = document.getElementById("chatBox");
+const messages = [
+  "Welcome to Lunar Rewadz 🚀",
+  "New player joined!",
+  "Event starting soon 🔥",
+  "Check Minecraft server 🎮"
+];
+
+let i = 0;
+
+setInterval(() => {
+  if(chatBox){
+    const msg = document.createElement("div");
+    msg.className = "message";
+    msg.innerText = messages[i % messages.length];
+    chatBox.appendChild(msg);
+    i++;
+  }
+}, 2000);
+
+/* Background particles */
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<100;i++){
+  particles.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    r: Math.random()*2
+  });
 }
 
-/* Sidebar */
-.sidebar {
-  width: 70px;
-  background: #020617;
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "white";
+  
+  particles.forEach(p=>{
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fill();
+  });
+  
+  requestAnimationFrame(draw);
 }
 
-/* Channels */
-.channels {
-  width: 200px;
-  background: #020617;
-  padding: 20px;
-}
-
-/* Chat */
-.chat {
-  flex: 1;
-  padding: 20px;
-}
-
-/* Message */
-.message {
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* Button */
-.join-btn {
-  background: #5865F2;
-  border: none;
-  padding: 10px;
-  color: white;
-  cursor: pointer;
-}
-
-/* Typing */
-#typing {
-  opacity: 0.7;
-  font-style: italic;
-}
-
-/* Status */
-.status {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.online {
-  background: lime;
-}
+draw();
