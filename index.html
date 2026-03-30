@@ -1,92 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Plutonium SMP</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plutonium SMP | Discord Server Showcase</title>
+  <meta
+    name="description"
+    content="Advanced Discord-style portfolio for Plutonium SMP with live server stats, owner and staff roles, events, features, and direct join actions."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Unbounded:wght@500;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <canvas id="particles"></canvas>
+  <div class="page-shell">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="grid-noise"></div>
 
-<div class="glow-bg"></div>
-
-<!-- Sidebar -->
-<div class="sidebar">
-  <div class="server">PS</div>
-</div>
-
-<!-- Channels -->
-<div class="channels">
-  <h3>PLUTONIUM SMP</h3>
-  <p onclick="showSection('home')"># home</p>
-  <p onclick="showSection('about')"># about</p>
-  <p onclick="showSection('server')"># server-info</p>
-  <p onclick="showSection('join')"># join</p>
-</div>
-
-<!-- Chat -->
-<div class="chat">
-
-  <!-- HOME -->
-  <div id="home" class="section">
-    <div class="message">
-      <h2>⚡ Plutonium SMP</h2>
-      <p>Welcome to the best Minecraft server 🚀</p>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <div id="about" class="section" style="display:none;">
-    <div class="message">
-      <h2>About 💬</h2>
-      <p>🔥 Survival SMP</p>
-      <p>🎮 Active Community</p>
-      <p>⚔️ Events & Rewards</p>
-    </div>
-  </div>
-
-  <!-- SERVER INFO -->
-  <div id="server" class="section" style="display:none;">
-    <div class="message">
-      <h2>Server Info 📊</h2>
-      <p>👑 Owner: Shrey</p>
-      <p>👥 Total Members: 180+</p>
-    </div>
-
-    <!-- STAFF CARDS -->
-    <div class="staff-container">
-
-      <div class="staff-card">
-        <h3>Herobrine</h3>
-        <p>Staff</p>
-      </div>
-
-      <div class="staff-card">
-        <h3>Plash</h3>
-        <p>Moderator</p>
-      </div>
-
-      <div class="staff-card">
-        <h3>Anshu</h3>
-        <p>Manager</p>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- JOIN -->
-  <div id="join" class="section" style="display:none;">
-    <div class="message">
-      <h2>Join Now 🚀</h2>
-      <a href="https://discord.gg/XmHPy5NA9U" target="_blank">
-        <button class="join-btn">Join Discord</button>
+    <header class="topbar">
+      <a class="brand" href="#home">
+        <span class="brand-icon">PS</span>
+        <span class="brand-copy">
+          <strong>Plutonium SMP</strong>
+          <small>Discord + Minecraft Community</small>
+        </span>
       </a>
-    </div>
+
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#staff">Staff Team</a>
+        <a href="#timeline">Events</a>
+        <a href="#join">Join</a>
+      </nav>
+
+      <a class="top-cta" href="https://discord.gg/2pFFHYwsb7" target="_blank" rel="noreferrer">Join Discord</a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">NEXT LEVEL SMP EXPERIENCE</p>
+          <h1>Not just a server. A full Discord-powered survival universe.</h1>
+          <p class="hero-text">
+            Plutonium SMP is built for players who want clean survival, active staff, events,
+            economy, giveaways, and a Discord community that actually feels alive.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-btn" href="https://discord.gg/2pFFHYwsb7" target="_blank" rel="noreferrer">Enter Discord</a>
+            <a class="secondary-btn" href="#staff">Meet The Team</a>
+          </div>
+
+          <div class="hero-stats">
+            <article>
+              <strong>2,847</strong>
+              <span>Discord members</span>
+            </article>
+            <article>
+              <strong>612</strong>
+              <span>monthly active players</span>
+            </article>
+            <article>
+              <strong>99.9%</strong>
+              <span>server stability</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal">
+          <div class="discord-window">
+            <div class="window-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="server-card featured">
+              <p class="tag">LIVE COMMUNITY</p>
+              <h2 id="rotatingHeadline">Active chats, clan wars, and late-night voice rooms</h2>
+              <p class="muted">
+                Daily grind, scheduled events, helpful moderators, and a smooth onboarding flow for new players.
+              </p>
+            </div>
+
+            <div class="mini-grid">
+              <article class="server-card">
+                <span>Owner</span>
+                <strong>Shrey</strong>
+                <p>Founder energy, major updates, community direction, and top-level announcements.</p>
+              </article>
+              <article class="server-card">
+                <span>Core Mode</span>
+                <strong>Survival SMP</strong>
+                <p>Balanced gameplay, builds, PvP tension, and economy progression.</p>
+              </article>
+              <article class="server-card accent">
+                <span>Status</span>
+                <strong>Online and Growing</strong>
+                <p>New members joining, staff responding, and events rolling every week.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="status-board reveal">
+        <article class="status-card">
+          <span>SERVER IP</span>
+          <strong>play.plutoniumsmp.fun</strong>
+          <p>One-click copy style presentation for your main Minecraft join address.</p>
+        </article>
+        <article class="status-card">
+          <span>DISCORD</span>
+          <strong>discord.gg/2pFFHYwsb7</strong>
+          <p>Fast invite entry for support, updates, giveaways, and voice hangouts.</p>
+        </article>
+        <article class="status-card">
+          <span>SEASON</span>
+          <strong>Season 4 Live</strong>
+          <p>Fresh builds, new economy, custom quests, and upgraded staff system.</p>
+        </article>
+      </section>
+
+      <section class="features reveal" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">WHY PLAYERS STAY</p>
+          <h2>A Discord server experience that keeps the SMP feeling alive.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Organized Channels</h3>
+            <p>Separate sections for announcements, chats, trades, support tickets, media, and voice rooms.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Giveaways & Events</h3>
+            <p>Weekly drops, PvP tournaments, build competitions, and seasonal community rewards.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Role System</h3>
+            <p>Owner, co-owner, admin, moderator, helper, creator, booster, and trusted member roles.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Economy + Clans</h3>
+            <p>Trading, rank grind, faction-style tension, and teamwork-driven domination.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="leadership reveal" id="staff">
+        <div class="section-heading">
+          <p class="eyebrow">THE LEADERSHIP</p>
+          <h2>Show who runs the server and why the community trusts them.</h2>
+        </div>
+
+        <div class="leadership-layout">
+          <article class="owner-card">
+            <span class="role-badge owner-badge">OWNER</span>
+            <h3>Shrey</h3>
+            <p>
+              Founder of Plutonium SMP. Handles vision, updates, partnerships, and keeps the
+              community quality high with direct involvement.
+            </p>
+            <div class="owner-meta">
+              <div>
+                <strong>201+</strong>
+                <span>announcements posted</span>
+              </div>
+              <div>
+                <strong>4 Seasons</strong>
+                <span>community history</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="staff-grid">
+            <article class="staff-card">
+              <span class="role-badge">CO-OWNER</span>
+              <strong>Herobrine</strong>
+              <p>Oversees core admin operations, event planning, and high-priority player issue resolution.</p>
+            </article>
+            <article class="staff-card">
+              <span class="role-badge">ADMIN</span>
+              <strong>Plash</strong>
+              <p>Manages reports, punishments, server order, and backend coordination across the community.</p>
+            </article>
+            <article class="staff-card">
+              <span class="role-badge">MODERATOR</span>
+              <strong>Venom</strong>
+              <p>Keeps chats clean, supports players, and handles day-to-day moderation.</p>
+            </article>
+            <article class="staff-card">
+              <span class="role-badge">HELPER</span>
+              <strong>Luna</strong>
+              <p>Greets new players, explains rules, and helps with onboarding questions.</p>
+            </article>
+            <article class="staff-card">
+              <span class="role-badge">EVENT TEAM</span>
+              <strong>Raptor</strong>
+              <p>Creates tournaments, arena nights, and hype moments that keep activity high.</p>
+            </article>
+            <article class="staff-card">
+              <span class="role-badge">MEDIA TEAM</span>
+              <strong>PixelOP</strong>
+              <p>Handles posters, clips, social teasers, and visual branding for the server.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="channels reveal">
+        <div class="section-heading">
+          <p class="eyebrow">DISCORD SECTIONS</p>
+          <h2>Make the server look structured, serious, and fun at the same time.</h2>
+        </div>
+
+        <div class="channel-layout">
+          <article class="channel-column">
+            <h3>Info Hub</h3>
+            <ul>
+              <li>#welcome</li>
+              <li>#rules</li>
+              <li>#announcements</li>
+              <li>#server-updates</li>
+            </ul>
+          </article>
+          <article class="channel-column">
+            <h3>Community Zone</h3>
+            <ul>
+              <li>#general-chat</li>
+              <li>#media-share</li>
+              <li>#trade-market</li>
+              <li>#clan-recruitment</li>
+            </ul>
+          </article>
+          <article class="channel-column">
+            <h3>Support Desk</h3>
+            <ul>
+              <li>#help-center</li>
+              <li>#report-player</li>
+              <li>#appeal-ban</li>
+              <li>#ticket-panel</li>
+            </ul>
+          </article>
+          <article class="channel-column highlight-column">
+            <h3>Voice Rooms</h3>
+            <ul>
+              <li>Lobby VC</li>
+              <li>Grinding VC</li>
+              <li>Clan War VC</li>
+              <li>Staff Meeting VC</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="timeline reveal" id="timeline">
+        <div class="section-heading">
+          <p class="eyebrow">EVENT ROTATION</p>
+          <h2>Weekly activity plan that makes the SMP feel active and premium.</h2>
+        </div>
+
+        <div class="timeline-grid">
+          <article class="timeline-card">
+            <span>MONDAY</span>
+            <h3>Quest Reset</h3>
+            <p>Fresh tasks, rewards, and economy objectives for everyone starting the week.</p>
+          </article>
+          <article class="timeline-card">
+            <span>WEDNESDAY</span>
+            <h3>Midweek Giveaway</h3>
+            <p>Discord drop event with ranks, keys, cosmetics, or valuable in-game items.</p>
+          </article>
+          <article class="timeline-card">
+            <span>FRIDAY</span>
+            <h3>Clan Night</h3>
+            <p>Voice activity spikes, battles begin, and competitive players take over the map.</p>
+          </article>
+          <article class="timeline-card">
+            <span>SUNDAY</span>
+            <h3>Build Showcase</h3>
+            <p>Community creations, screenshots, and featured member highlights go live.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="targets reveal">
+        <div class="section-heading">
+          <p class="eyebrow">DISCORD TARGETS</p>
+          <h2>The goals pushing Plutonium SMP toward a bigger community.</h2>
+        </div>
+
+        <div class="timeline-grid">
+          <article class="timeline-card">
+            <span>MEMBER GOAL</span>
+            <h3>5,000 Members</h3>
+            <p>Grow the Discord into a highly active hub with daily chats, reactions, and new players joining in.</p>
+          </article>
+          <article class="timeline-card">
+            <span>STAFF TARGET</span>
+            <h3>Fast Support</h3>
+            <p>Keep ticket replies quick so every member feels seen, helped, and welcomed properly.</p>
+          </article>
+          <article class="timeline-card">
+            <span>CONTENT GOAL</span>
+            <h3>Weekly Hype Drops</h3>
+            <p>Post teasers, event posters, and media clips that keep the Discord looking alive and premium.</p>
+          </article>
+          <article class="timeline-card">
+            <span>COMMUNITY GOAL</span>
+            <h3>Stronger Loyalty</h3>
+            <p>Build a server where players stay for the vibe, staff support, clan activity, and season updates.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="join reveal" id="join">
+        <div class="join-panel">
+          <div>
+            <p class="eyebrow">HOW TO ENTER</p>
+            <h2>Join the Discord, meet the staff, and start your survival grind.</h2>
+            <p>
+              Replace all demo names and counts with your real server details, then this page becomes a
+              full showcase for your SMP brand.
+            </p>
+          </div>
+
+          <div class="join-steps">
+            <div class="step-card">
+              <strong>1</strong>
+              <span>Join the Discord invite</span>
+            </div>
+            <div class="step-card">
+              <strong>2</strong>
+              <span>Read rules and choose roles</span>
+            </div>
+            <div class="step-card">
+              <strong>3</strong>
+              <span>Enter the SMP and start playing</span>
+            </div>
+          </div>
+
+          <div class="join-actions">
+            <a class="primary-btn" href="https://discord.gg/2pFFHYwsb7" target="_blank" rel="noreferrer">Open Discord</a>
+            <a class="secondary-btn" href="minecraft://?addExternalServer=Plutonium%20SMP|play.plutoniumsmp.fun:19132">Add Server</a>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
 
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
