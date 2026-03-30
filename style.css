@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  display: flex;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Glow background */
+.glow-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(88,101,242,0.2), transparent);
+  z-index: -1;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 80px;
+  background: #020617;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.server {
+  width: 55px;
+  height: 55px;
+  background: #5865F2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 0 15px #5865F2;
+  transition: 0.3s;
+}
+
+.server:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px #5865F2;
+}
+
+/* Channels */
+.channels {
+  width: 220px;
+  background: #020617;
+  padding: 20px;
+}
+
+.channels h3 {
+  color: #5865F2;
+}
+
+.channels p {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.channels p:hover {
+  color: #5865F2;
+  transform: translateX(5px);
+}
+
+/* Chat */
+.chat {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Message */
+.message {
+  background: rgba(30, 41, 59, 0.8);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(88,101,242,0.2);
+  animation: slideUp 0.4s ease;
+}
+
+.message h2 {
+  color: #5865F2;
+  text-shadow: 0 0 10px #5865F2;
+}
+
+/* Button */
+.join-btn {
+  background: #5865F2;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #5865F2;
+}
+
+.join-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #5865F2;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}

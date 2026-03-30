@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Plutonium SMP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="glow-bg"></div>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="server">PS</div>
+</div>
+
+<!-- Channels -->
+<div class="channels">
+  <h3>PLUTONIUM SMP</h3>
+  <p onclick="showSection('home')"># home</p>
+  <p onclick="showSection('about')"># about</p>
+  <p onclick="showSection('join')"># join</p>
+</div>
+
+<!-- Chat -->
+<div class="chat">
+
+  <!-- HOME -->
+  <div id="home" class="section">
+    <div class="message">
+      <h2>⚡ Plutonium SMP</h2>
+      <p>Welcome to the best Minecraft server 🚀</p>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" class="section" style="display:none;">
+    <div class="message">
+      <h2>About 💬</h2>
+      <p>🔥 Survival SMP</p>
+      <p>🎮 Active Community</p>
+      <p>⚔️ Events & Rewards</p>
+    </div>
+  </div>
+
+  <!-- JOIN -->
+  <div id="join" class="section" style="display:none;">
+    <div class="message">
+      <h2>Join Now 🚀</h2>
+      <p>Discord: YourDiscordID</p>
+      <p>Minecraft: YourMCName</p>
+      <a href="https://discord.gg/YOUR_LINK" target="_blank">
+        <button class="join-btn">Join Server</button>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
