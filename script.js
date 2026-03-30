@@ -1,55 +1,40 @@
-function showSection(id) {
-  document.querySelectorAll('.section').forEach(sec => {
-    sec.style.display = "none";
-  });
-  document.getElementById(id).style.display = "block";
-}
-
-// typing animation
-const texts = [
-  "Welcome to Plutonium SMP 🚀",
-  "Best Minecraft Server 🔥",
-  "Join Fast 😈"
+const rotatingHeadlines = [
+  "Active chats, clan wars, and late-night voice rooms",
+  "Giveaways, events, and staff that actually respond",
+  "A survival SMP built around real community energy",
+  "Discord hype outside the game, adventure inside the game"
 ];
 
-let i = 0;
+const headlineNode = document.getElementById("rotatingHeadline");
+let headlineIndex = 0;
 
-setInterval(() => {
-  const el = document.querySelector("#home .message p");
-  if (el) {
-    el.innerText = texts[i % texts.length];
-    i++;
-  }
-}, 2000);
-
-
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-
-for (let i = 0; i < 80; i++) {
-  particles.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    r: Math.random() * 2
-  });
+if (headlineNode) {
+  window.setInterval(() => {
+    headlineIndex = (headlineIndex + 1) % rotatingHeadlines.length;
+    headlineNode.textContent = rotatingHeadlines[headlineIndex];
+  }, 2600);
 }
 
-function drawParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#5865F2";
+const revealNodes = document.querySelectorAll(".reveal");
 
-  particles.forEach(p => {
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fill();
-  });
+if ("IntersectionObserver" in window && revealNodes.length > 0) {
+  const observer = new IntersectionObserver(
+    (entries, currentObserver) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
 
-  requestAnimationFrame(drawParticles);
+        entry.target.classList.add("is-visible");
+        currentObserver.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.18
+    }
+  );
+
+  revealNodes.forEach((node) => observer.observe(node));
+} else {
+  revealNodes.forEach((node) => node.classList.add("is-visible"));
 }
-
-drawParticles();
