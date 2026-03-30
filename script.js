@@ -1,24 +1,69 @@
-// section switch
-function showSection(id) {
-  document.querySelectorAll('.section').forEach(sec => {
-    sec.style.display = "none";
-  });
-  document.getElementById(id).style.display = "block";
+body {
+  margin: 0;
+  display: flex;
+  background: #0f172a;
+  color: white;
+  font-family: Arial;
 }
 
-// typing animation
-const texts = [
-  "Welcome to Plutonium SMP 🚀",
-  "Best Minecraft Server 🔥",
-  "Join Fast 😈"
-];
+/* Background canvas */
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
-let i = 0;
+/* Sidebar */
+.sidebar {
+  width: 70px;
+  background: #020617;
+}
 
-setInterval(() => {
-  const el = document.querySelector("#home .message p");
-  if (el) {
-    el.innerText = texts[i % texts.length];
-    i++;
-  }
-}, 2000);
+/* Channels */
+.channels {
+  width: 200px;
+  background: #020617;
+  padding: 20px;
+}
+
+/* Chat */
+.chat {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Message */
+.message {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Button */
+.join-btn {
+  background: #5865F2;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Typing */
+#typing {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Status */
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.online {
+  background: lime;
+}
