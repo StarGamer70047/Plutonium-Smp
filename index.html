@@ -2,48 +2,75 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Plutonium Smp</title>
+<title>Plutonium SMP</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<canvas id="bg"></canvas>
+<div class="glow-bg"></div>
 
+<!-- Sidebar -->
 <div class="sidebar">
-  <div class="server active">LR</div>
+  <div class="server">PS</div>
 </div>
 
+<!-- Channels -->
 <div class="channels">
-  <h3>SERVER</h3>
+  <h3>PLUTONIUM SMP</h3>
   <p onclick="showSection('home')"># home</p>
-  <p onclick="showSection('chat')"># live-chat</p>
-  <p onclick="showSection('voice')"># voice</p>
+  <p onclick="showSection('about')"># about</p>
+  <p onclick="showSection('server')"># server-info</p>
   <p onclick="showSection('join')"># join</p>
 </div>
 
+<!-- Chat -->
 <div class="chat">
 
   <!-- HOME -->
   <div id="home" class="section">
-    <div class="message fade">
-      <h2>👑 Lunar Rewadz</h2>
-      <p>Best Gaming Community 🚀</p>
-      <span class="status online"></span> Online
+    <div class="message">
+      <h2>⚡ Plutonium SMP</h2>
+      <p>Welcome to the best Minecraft server 🚀</p>
     </div>
   </div>
 
-  <!-- LIVE CHAT -->
-  <div id="chat" class="section" style="display:none;">
-    <div id="chatBox"></div>
-    <p id="typing">User is typing...</p>
+  <!-- ABOUT -->
+  <div id="about" class="section" style="display:none;">
+    <div class="message">
+      <h2>About 💬</h2>
+      <p>🔥 Survival SMP</p>
+      <p>🎮 Active Community</p>
+      <p>⚔️ Events & Rewards</p>
+    </div>
   </div>
 
-  <!-- VOICE -->
-  <div id="voice" class="section" style="display:none;">
+  <!-- SERVER INFO -->
+  <div id="server" class="section" style="display:none;">
     <div class="message">
-      🎧 Voice Channel  
-      <p>Users connected: 5</p>
+      <h2>Server Info 📊</h2>
+      <p>👑 Owner: Shrey</p>
+      <p>👥 Total Members: 500+</p>
+    </div>
+
+    <!-- STAFF CARDS -->
+    <div class="staff-container">
+
+      <div class="staff-card">
+        <h3>Herobrine</h3>
+        <p>Admin</p>
+      </div>
+
+      <div class="staff-card">
+        <h3>Plash</h3>
+        <p>Moderator</p>
+      </div>
+
+      <div class="staff-card">
+        <h3>Anshu</h3>
+        <p>Manager</p>
+      </div>
+
     </div>
   </div>
 
@@ -51,7 +78,7 @@
   <div id="join" class="section" style="display:none;">
     <div class="message">
       <h2>Join Now 🚀</h2>
-      <a href="https://discord.gg/YOUR_LINK" target="_blank">
+      <a href="https://discord.gg/XmHPy5NA9U" target="_blank">
         <button class="join-btn">Join Discord</button>
       </a>
     </div>
